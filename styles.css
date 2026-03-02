@@ -1,0 +1,147 @@
+/* Background */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #59606a, #2c2f36);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Search Container */
+.search-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Input */
+input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    width: 250px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 10px #e91c89;
+}
+
+/* Button */
+button {
+    padding: 12px 18px;
+    background: linear-gradient(45deg, #e91c89, #ff5fcf);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(233, 28, 137, 0.5);
+}
+
+/* Spinner */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255,255,255,0.2);
+    border-top: 5px solid #ff5fcf;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Country Card */
+.country-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+.country-card img {
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* Border Grid */
+.border-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Border Card */
+.border-grid div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.border-grid div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(255, 95, 207, 0.4);
+}
+
+.border-grid img {
+    margin-top: 8px;
+    border-radius: 6px;
+}
+
+/* Error Styling */
+.error {
+    color: #ff4d6d;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Hidden */
+.hidden {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    input[type="text"],
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
